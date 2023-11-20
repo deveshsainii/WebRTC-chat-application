@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple WebRTC Chat App</title>
+    <style>
+        #localVideo, #remoteVideo {
+            width: 45%;
+            border: 1px solid black;
+        }
+        #chatRoom {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simple WebRTC Chat App</h2>
+    <div id="startRoom">
+        <button id="startButton">Start Chat</button>
+    </div>
+    <div id="chatRoom">
+        <video id="localVideo" autoplay muted></video>
+        <video id="remoteVideo" autoplay></video>
+        <br/>
+        <textarea id="offer" placeholder="Paste offer here"></textarea>
+        <button id="createOffer">Create Offer</button>
+        <button id="setOffer">Set Offer</button>
+        <br/>
+        <textarea id="answer" placeholder="Paste answer here"></textarea>
+        <button id="createAnswer">Create Answer</button>
+        <button id="setAnswer">Set Answer</button>
+    </div>
+
+    <script src="webrtc.js"></script>
+</body>
+</html>
